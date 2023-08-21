@@ -129,3 +129,12 @@ It is a critical Disease.If any chicken have this disease then it will show thro
  7. Update the pipeline
  8. Update the main.py
  9. Update the dvc.yaml
+
+## [Run by yourself](#run-by-yourself)🏃🏽
+1. Clone the repository:  
+     `git clone https://github.com/Sourabh0921/Chicken_Disease_Classification_Project.git'
+2. Create a virtual enviornment: `conda create -n name python=version -y`
+3. Activate virutal enviornment: `conda activate name`
+4. Install dependencies: `pip install -r requirements.txt`
+5. In a **src/cnnClassifier** folder you can see `.ipynb` files which have been used for Data Analaytics, Model Building and evaluation.
+6. **app.py** is an entry file to run Flask App: `python app.py`
