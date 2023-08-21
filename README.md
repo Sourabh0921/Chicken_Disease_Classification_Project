@@ -72,17 +72,50 @@ It is a critical Disease.If any chicken have this disease then it will show thro
      
      2.We training our model using epoch size,steps_per_epoch,validation_steps.
      
-     3. we give epoch size is 5 and we will get Accuracy 0.95 and loss=0.77.
+     3.We give epoch size is 5 and we will get Accuracy 0.95 and loss=0.77.
         
      4.Save the model in path.
 
 *Phase6*-:
  - Model_Evaluation-:
-    1. We check loss and accuracy.
-    2. Model will be saved in json file.
-    3. It will generate valid generator also load the model and do the evalution.It will save 
+  1. We check loss and accuracy.
+  2. Model will be saved in json file.
+  3. It will generate valid generator also load the model and do the evalution.It will save 
        in evalution matrix.
-   4.Save the score meaning Loss and Accuracy in Json format.
+  4.Save the score meaning Loss and Accuracy in Json format.
+
+ *Writing DVC file for Tracking the Pipeline*-:
+  We use dvc beacause it will save time.If we run dvc file then our all pipeline will run automtically stepswise.In this if some stages is already completed then it will not run again they move on next steps.
+  
+  - dvc.yaml
+    
+     - Using this file will automatically run steps wise like
+       1.Stage_01_Data_ingestion.
+       2.Stage_02_Prepare_Base_Model.
+       3.Stage_03_PrepareCallbacks.
+       4.Stage_04_Training.
+       5.Stage_05_Model Evaluation.
+
+ *Phase7*-:
+  - Prediction Pipeline-:
+    
+    1.It will take image from our input and then give the prediction.
+    
+    2.predict function will load the model.h5 then load the filename using image then convert 
+      image to array then give prediction.
+      
+   3.Result we will be like this If get O then it is Coccidiosis and 1 it is Healthy.
+
+*Phase7*-:
+ - Application-:
+   
+   1. We use Flask we create WebApp.
+   2. The input image we passed save in the InputImage.jpg.
+   3. We create 3 routes
+       1.route '/' this will like default route give html page.
+       2.Training route-:In this training will start on the page.
+       3.Prediction Route-:Passing the input image it will give prediction.
+
 
 
  ## Workflows
